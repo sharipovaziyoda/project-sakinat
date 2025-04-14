@@ -7,6 +7,7 @@ import Audio from './components/Audio';
 import Favorites from './components/Favorites';
 import ReadBooks from './components/ReadBooks';
 import Stores from './components/Stores';
+import SearchPage from './components/SearchPage';
 
 function App() {
  
@@ -21,6 +22,7 @@ function App() {
         <Route path="/favorites" element={<Favorites/>}></Route>
         <Route path="read" element={<ReadBooks/>}></Route>
         <Route path="stores" element={<Stores/>}></Route>
+        <Route path="/search" element={<SearchPage/>} />
       </Routes>
     </Router>
   )
