@@ -7,13 +7,15 @@ import Audio from './components/Audio';
 import Favorites from './components/Favorites';
 import ReadBooks from './components/ReadBooks';
 import Stores from './components/Stores';
-import SearchPage from './components/SearchPage';
+import { PdfProvider } from './components/PdfContext';
+import Footer from './components/Footer';
 
 function App() {
  
 
   return (
     <Router>
+         <PdfProvider>
       <Navbar/>
       <Routes>
         <Route path="/" element={<Home />}></Route>
@@ -22,8 +24,9 @@ function App() {
         <Route path="/favorites" element={<Favorites/>}></Route>
         <Route path="read" element={<ReadBooks/>}></Route>
         <Route path="stores" element={<Stores/>}></Route>
-        <Route path="/search" element={<SearchPage/>} />
       </Routes>
+      <Footer/>
+      </PdfProvider>
     </Router>
   )
 }
